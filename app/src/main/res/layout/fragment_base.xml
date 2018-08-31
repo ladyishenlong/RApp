@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ladyishenlong.rapp.pages.BaseFragment">
+    tools:context="com.ladyishenlong.rapp.pages.base.BaseFragment">
 
 
     <RelativeLayout
@@ -13,11 +13,5 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv"
-        android:text="基本碎片"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </RelativeLayout>

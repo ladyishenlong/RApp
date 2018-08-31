@@ -8,7 +8,9 @@ import android.support.v4.view.ViewPager;
 import com.ladyishenlong.ioc_annotation.BaseActivityLayout;
 import com.ladyishenlong.rapp.R;
 import com.ladyishenlong.rapp.adapter.ViewPagerAdapter;
+import com.ladyishenlong.rapp.pages.base.BaseActivity;
 import com.ladyishenlong.rapp.pages.page_home.HomeFragment;
+import com.ladyishenlong.rapp.pages.page_news.NewsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,7 @@ public class MainActivity extends BaseActivity {
 
         fragmentList=new ArrayList<>();
         fragmentList.add(new HomeFragment());
+        fragmentList.add(new NewsFragment());
 
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),fragmentList);
         viewPagerMain.setAdapter(viewPagerAdapter);
@@ -56,15 +59,15 @@ public class MainActivity extends BaseActivity {
                 .badgeTitle("主页")
                 .build());
 
-//        models.add(new NavigationTabBar.Model.Builder(
-//                getDrawable(R.mipmap.label_news),
-//                getColor(R.color.green)).
-//                title("新闻")
-//                .badgeTitle("新闻")
-//                .build());
+        models.add(new NavigationTabBar.Model.Builder(
+                getDrawable(R.mipmap.label_news),
+                getColor(R.color.green)).
+                title("新闻")
+                .badgeTitle("新闻")
+                .build());
 
         navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPagerMain, 1);
+        navigationTabBar.setViewPager(viewPagerMain, 0);
         navigationTabBar.setBgColor(Color.WHITE);
 
     }

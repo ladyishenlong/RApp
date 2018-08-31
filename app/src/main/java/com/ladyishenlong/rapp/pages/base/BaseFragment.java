@@ -1,4 +1,4 @@
-package com.ladyishenlong.rapp.pages;
+package com.ladyishenlong.rapp.pages.base;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

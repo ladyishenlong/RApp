@@ -33,7 +33,7 @@ public class BaseFragmentLayoutProxyInfo extends BaseProxyInfo {
         for (Integer layoutId : injectElements.keySet()) {
             stringBuilder.append("" +
                     "    @Override\n" +
-                    "    public void inject(HomeFragment fragment, View baseFragmentLayout) {\n" +
+                    "    public void inject("+typeElement.getQualifiedName() +" fragment, View baseFragmentLayout) {\n" +
                     "                View view = fragment.getLayoutInflater().inflate(" + layoutId + ",null);\n" +
                     "                RelativeLayout relativeLayout =(RelativeLayout)baseFragmentLayout;\n" +
                     "                relativeLayout.addView(view);\n" +
