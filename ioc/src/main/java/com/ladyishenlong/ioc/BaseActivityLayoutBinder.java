@@ -40,10 +40,10 @@ public class BaseActivityLayoutBinder {
 
         try {
             //反射获取代理类
-            Class<?> proxyCalss = Class.forName(proxyClassFullName);
+            Class<?> proxyClass = Class.forName(proxyClassFullName);
 
             //通过接口传入数据
-            BaseActivityLayoutInjector injector = (BaseActivityLayoutInjector) proxyCalss.newInstance();
+            BaseActivityLayoutInjector injector = (BaseActivityLayoutInjector) proxyClass.newInstance();
 
             if (injector != null) {
                 injector.inject(activity, baseLayout);

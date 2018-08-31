@@ -11,7 +11,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 
-
     }
     buildTypes {
         release {
@@ -26,6 +25,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -39,7 +39,6 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'//没有使用特殊Header，可以不加这行
     implementation 'com.android.support:appcompat-v7:27.1.1'//版本 23以上（必须）
 
-
     //butterknife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
@@ -48,7 +47,6 @@ dependencies {
     implementation project(':ioc')
     implementation project(':ioc-annotation')
     annotationProcessor project(':ioc-processor')
-
 
     //底部栏
     implementation 'devlight.io:navigationtabbar:1.2.5'

@@ -55,7 +55,7 @@ public abstract class BaseProxyInfo {
     /**
      * import需要的包
      */
-    protected    void importFile(StringBuilder stringBuilder){
+    protected  void importFile(StringBuilder stringBuilder){
 
     }
 
