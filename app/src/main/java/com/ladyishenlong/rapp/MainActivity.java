@@ -6,7 +6,6 @@ import android.widget.TextView;
 import com.ladyishenlong.ioc_annotation.BaseActivityLayout;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 @BaseActivityLayout(R.layout.activity_main)
 public class MainActivity extends BaseActivity {

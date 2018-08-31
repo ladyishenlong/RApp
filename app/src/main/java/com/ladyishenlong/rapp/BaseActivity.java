@@ -23,7 +23,6 @@ public class BaseActivity extends AppCompatActivity {
 
     private void initView(){
         baseLayout=(RelativeLayout)findViewById(R.id.baseLayout);
-
     }
 
 

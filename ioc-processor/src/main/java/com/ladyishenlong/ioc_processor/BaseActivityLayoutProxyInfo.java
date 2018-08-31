@@ -24,7 +24,8 @@ public class BaseActivityLayoutProxyInfo extends BaseProxyInfo {
     protected void importFile(StringBuilder stringBuilder) {
         super.importFile(stringBuilder);
         stringBuilder.append("import android.view.View;\n")
-                .append("import android.widget.RelativeLayout;\n");
+                .append("import android.widget.RelativeLayout;\n")
+                .append("import butterknife.ButterKnife;\n");
     }
 
     @Override
@@ -36,6 +37,7 @@ public class BaseActivityLayoutProxyInfo extends BaseProxyInfo {
                     "        View view = activity.getLayoutInflater().inflate(" + layoutId + ", null);\n" +
                     "        RelativeLayout relativeLayout=(RelativeLayout)baseLayout; \n"+
                     "        relativeLayout.addView(view);\n"+
+                    "        ButterKnife.bind(activity);\n"+
                     "    }");
         }
 

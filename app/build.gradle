@@ -50,4 +50,8 @@ dependencies {
     annotationProcessor project(':ioc-processor')
 
 
+    //底部栏
+    implementation 'devlight.io:navigationtabbar:1.2.5'
+
+
 }
