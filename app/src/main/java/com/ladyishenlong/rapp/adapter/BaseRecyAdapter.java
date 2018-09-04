@@ -16,8 +16,11 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * recyclerview 的base adapter
+ * 采用butterknift绑定数据
+ */
 public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> {
-
 
     protected Context context;
     protected List<T> datas;
@@ -31,32 +34,30 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseViewHo
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         @LayoutRes int layoutId = setLayout();
-        LayoutInflater inflater =LayoutInflater.from(context);
-        BaseViewHolder viewHolder =new BaseViewHolder(inflater.inflate(layoutId, parent, false));
+        LayoutInflater inflater = LayoutInflater.from(context);
+        BaseViewHolder viewHolder = new BaseViewHolder(inflater.inflate(layoutId, parent, false));
         return viewHolder;
     }
 
     /**
      * 返回的是该recycleview的布局，
      * 放在此处方便butterknfie的插件使用
-     * */
+     */
     protected abstract int setLayout();
 
 
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         View itemView = holder.getItemView();
-        ButterKnife.bind(this, itemView);//绑定butterknife
-        bindData(datas.get(position),position);
+        ButterKnife.bind(this, itemView); //绑定butterknife
+        bindData(datas.get(position), position);
     }
-
 
 
     /**
      * 子类数据设置处
-     * */
-    protected abstract void bindData(T data,int position);
-
+     */
+    protected abstract void bindData(T data, int position);
 
 
     /**
@@ -66,7 +67,6 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseViewHo
         this.datas = datas;
         notifyDataSetChanged();
     }
-
 
 
     @Override

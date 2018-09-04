@@ -27,9 +27,9 @@ public class TestAdapter extends BaseRecyAdapter<String> {
 
     @Override
     protected void bindData(String data, int position) {
+        //直接进行数据的加载
         tvText.setText(data);
     }
-
 
 
 }

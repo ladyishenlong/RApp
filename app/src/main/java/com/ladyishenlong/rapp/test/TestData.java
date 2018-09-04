@@ -8,7 +8,7 @@ public class TestData {
     public static List<String> getTestData(){
 
         List<String> datas=new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 5; i++) {
             datas.add("测试数据："+i);
         }
 
