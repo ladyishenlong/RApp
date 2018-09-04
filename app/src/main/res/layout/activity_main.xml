@@ -19,6 +19,6 @@
        android:layout_alignParentBottom="true"
        android:id="@+id/navigationTabBar"
        android:layout_width="match_parent"
-       android:layout_height="60dp" />
+       android:layout_height="40dp" />
 
 </RelativeLayout>

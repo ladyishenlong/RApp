@@ -38,24 +38,22 @@ public class MainActivity extends BaseActivity {
         initView();
     }
 
-    private void initView(){
+    private void initView() {
 
-        fragmentList=new ArrayList<>();
+        fragmentList = new ArrayList<>();
         fragmentList.add(new HomeFragment());
         fragmentList.add(new NewsFragment());
 
-        viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),fragmentList);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPagerMain.setAdapter(viewPagerAdapter);
 
 
-
-
-        models=new ArrayList<>();
+        models = new ArrayList<>();
 
         models.add(new NavigationTabBar.Model.Builder(
                 getDrawable(R.mipmap.label_home),
                 getColor(R.color.red)).
-                        title("主页")
+                title("主页")
                 .badgeTitle("主页")
                 .build());
 
